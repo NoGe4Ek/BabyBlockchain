@@ -23,6 +23,6 @@ docker run bb
 ```
 ## License
 Apache License 2.0
-[//]: # (These are reference links used in the body of this note and get stripped out when the markdown processor does its job. There is no need to format nicely because it shouldn't be seen. Thanks SO - http://stackoverflow.com/questions/4823468/store-comments-in-markdown-syntax)
+
 [Task]: <https://github.com/SemenMartynov/Software-Engineering-2022/blob/main/NetworkProgrammingTask.md>
 [Other course projects]: <https://github.com/SemenMartynov/Software-Engineering-2022/pulls>
