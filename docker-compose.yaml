@@ -1,0 +1,20 @@
+version: "3.8"
+
+services:
+  node1:
+    image: noge4ek/baby-blockchain
+    container_name: node1
+    network_mode: host
+    command: "8000"
+
+  node2:
+    image: noge4ek/baby-blockchain
+    container_name: node2
+    network_mode: host
+    command: "8001"
+
+  node3:
+    image: noge4ek/baby-blockchain
+    container_name: node3
+    network_mode: host
+    command: "8002"
