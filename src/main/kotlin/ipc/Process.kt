@@ -1,6 +1,7 @@
 package ipc
 
-import com.google.gson.Gson
+import SharedSpace
+import blockchain.Block
 import com.google.gson.JsonSyntaxException
 import java.io.BufferedReader
 import java.io.InputStreamReader
@@ -43,7 +44,12 @@ data class Process(val name: String, val port: Int) {
                                 // Read messages from the client
                                 val message = input.readLine()
                                 try {
-                                    val parsedMessage = Gson().fromJson(message, Message::class.java) ?: break
+                                    val block = SharedSpace.gson.fromJson(message, Block::class.java) ?: break
+                                    SharedSpace.block = block
+                                    if (block.isActualize)
+                                        println("$name actualize block: $block")
+                                    else
+                                        println("$name received block: $block")
                                 } catch (e: JsonSyntaxException) {
                                     println("$name can't parse message: $message")
                                 }
