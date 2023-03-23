@@ -11,7 +11,7 @@ repositories {
 }
 
 dependencies {
-    implementation("org.junit.jupiter:junit-jupiter:5.8.1")
+    implementation("org.junit.jupiter:junit-jupiter:5.9.2")
     implementation("com.google.code.gson:gson:2.10.1")
     testImplementation(kotlin("test"))
 }
@@ -20,8 +20,8 @@ tasks.test {
     useJUnitPlatform()
 }
 
-kotlin {
-    jvmToolchain(8)
+tasks.withType<org.jetbrains.kotlin.gradle.tasks.KotlinCompile> {
+    kotlinOptions.jvmTarget = "1.8"
 }
 
 application {
