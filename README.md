@@ -1,3 +1,7 @@
+master 
+[![Tests](https://github.com/NoGe4Ek/BabyBlockchain/actions/workflows/gradle-tests.yml/badge.svg?branch=master)](https://github.com/NoGe4Ek/telegram-notes-service/actions/workflows/gradle-tests.yml) 
+dev
+[![Tests](https://github.com/NoGe4Ek/BabyBlockchain/actions/workflows/gradle-tests.yml/badge.svg?branch=dev)](https://github.com/NoGe4Ek/telegram-notes-service/actions/workflows/gradle-tests.yml)
 # BabyBlockchain
 '_Done for the poly Software-Engineering-2022 course_'
 
