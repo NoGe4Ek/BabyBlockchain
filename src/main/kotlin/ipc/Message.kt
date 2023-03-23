@@ -1,0 +1,3 @@
+package ipc
+
+interface Message
