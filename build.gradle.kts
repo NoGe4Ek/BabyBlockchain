@@ -41,3 +41,10 @@ tasks.create("MyFatJar", Jar::class) {
     from(dependencies)
     with(tasks.jar.get())
 }
+
+tasks {
+    // Use the native JUnit support of Gradle.
+    "test"(Test::class) {
+        useJUnitPlatform()
+    }
+}
