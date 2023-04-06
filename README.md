@@ -29,4 +29,4 @@ docker run bb
 Apache License 2.0
 
 [Task]: <https://github.com/SemenMartynov/Software-Engineering-2022/blob/main/NetworkProgrammingTask.md>
-[Other course projects]: <https://github.com/SemenMartynov/Software-Engineering-2022/pulls>
+[Other course projects]: <https://github.com/SemenMartynov/Software-Engineering-2022/issues>

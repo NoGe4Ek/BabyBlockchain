@@ -16,8 +16,7 @@ fun main(args: Array<String>) {
     val node = Node()
 
     while (true) {
-        val receivedBlock = SharedSpace.block?.copy()
-        SharedSpace.block = null
+        val receivedBlock = SharedSpace.getBlock()
 
         when {
             isBlockReceivedEvent(receivedBlock) -> handleBlockReceived(receivedBlock!!, node)

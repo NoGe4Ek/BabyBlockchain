@@ -15,8 +15,8 @@ import java.net.Socket
  *
  * @param process
  */
-fun isPriorityProcess(process: Process): Boolean =
-    process.name.split(" ")[1].toInt() == getNodeNumber(PRIORITY_PROCESS_PORT)
+fun Process.isPriorityProcess(): Boolean =
+    this.name.split(" ")[1].toInt() == getNodeNumber(PRIORITY_PROCESS_PORT)
 
 /**
  * Get a list of ports of neighboring blockchain nodes

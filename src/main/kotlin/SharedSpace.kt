@@ -6,3 +6,5 @@ object SharedSpace {
     var lastActualizeIndex = 0L
     val gson = Gson()
 }
+
+fun SharedSpace.getBlock(): Block? = this.block.also { this.block = null }

@@ -3,7 +3,7 @@ package blockchain
 import Config.GENESIS
 import java.security.MessageDigest
 
-class Node {
+open class Node {
     companion object {
         const val DATA_LENGTH = 256
         const val DEFAULT_NONCE = 0L
@@ -47,14 +47,14 @@ class Node {
         producingBlock = null
     }
 
-    private fun getHash(
+    protected fun getHash(
         index: Long,
         prevHash: String,
         data: String,
         nonce: Long
     ): String = (index.toString() + prevHash + data + nonce.toString()).toSha256()
 
-    private fun getData(): String = getRandomString(DATA_LENGTH)
+    protected fun getData(): String = getRandomString(DATA_LENGTH)
 
     private fun getRandomString(length: Int): String {
         val charset = ('a'..'z') + ('A'..'Z') + ('0'..'9')
