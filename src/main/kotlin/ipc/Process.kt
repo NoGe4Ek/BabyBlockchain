@@ -9,13 +9,13 @@ import java.net.ServerSocket
 import java.net.Socket
 import java.net.SocketException
 
-data class Process(val name: String, val port: Int) {
-    private lateinit var serverSocket: ServerSocket
-    private lateinit var clientSocket: Socket
-    private val clientSockets = mutableListOf<Socket>()
-    private var serverThread: Thread? = null
-    private var clientThread: Thread? = null
-    private val clientThreads = mutableListOf<Thread>()
+open class Process(val name: String, val port: Int) {
+    protected lateinit var serverSocket: ServerSocket
+    protected lateinit var clientSocket: Socket
+    protected val clientSockets = mutableListOf<Socket>()
+    protected var serverThread: Thread? = null
+    protected var clientThread: Thread? = null
+    protected val clientThreads = mutableListOf<Thread>()
 
     // Save all out-coming peer sockets
     val peerSockets = mutableMapOf<Int, Socket>()
