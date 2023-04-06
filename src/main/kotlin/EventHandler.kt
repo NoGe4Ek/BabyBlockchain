@@ -8,12 +8,10 @@ import ipc.isPriorityProcess
 object EventHandler {
     fun isBlockReceivedEvent(receivedBlock: Block?): Boolean = receivedBlock != null && !receivedBlock.isActualize
     fun isActualizeBlockReceivedEvent(receivedBlock: Block?, process: Process): Boolean =
-        receivedBlock != null && isPriorityProcess(process).not()
+        receivedBlock != null && process.isPriorityProcess().not()
 
     fun isActualizeBlockBroadcastEvent(node: Node, process: Process): Boolean =
-        node.getLastBlock().index % INTERVAL_ACTUALIZE_BLOCK == 0L && SharedSpace.lastActualizeIndex != node.getLastBlock().index && isPriorityProcess(
-            process
-        )
+        node.getLastBlock().index % INTERVAL_ACTUALIZE_BLOCK == 0L && SharedSpace.lastActualizeIndex != node.getLastBlock().index && process.isPriorityProcess()
 
     fun handleBlockReceived(receivedBlock: Block, node: Node): Boolean {
         if (node.isBlockValid(receivedBlock)) {
